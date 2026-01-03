@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Deposit</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+                margin-left: 500px;
+                margin-top: 250px;
+                margin-right: 600px;
+                padding: 30px;
+                background-color: lightgreen;
+                border: solid black 2px;
+                border-radius: 20px;
+            }
+            
+            
+        </style>
+    </head>
+    <body >
+        <form action="setpinurl" method="post">
+            <input type="hidden" name="action" value="deposit">
+            
+            Enter Amount:<input type="number" name="amount" required><br><br><!-- comment -->
+            
+            <input type="submit" value="Confirm"><br><br>
+            <a href="atmoperation.html">Cancel</a>
+        </form>
+    </body>
+</html>

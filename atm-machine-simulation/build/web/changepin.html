@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Change PIN</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form action="setpinurl" method="post">
+            <input type="hidden" name="action" value="changepin">
+            
+            Enter New PIN:<input type="password" maxlength="6" name="newPin" oninput="this.value= this.value.replace(/[^0-9]/g,'')" placeholder="New PIN"  required><br><br>
+            Confirm New PIN:<input type="password" maxlength="6" name="newConfirmPin" oninput="this.value= this.value.replace(/[^0-9]/g,'')" placeholder="Confirm PIN"  required><br><br>
+            <input type="submit" value="Confirm"><br><br>
+            
+            <a href="atmoperation.html"> Cancel</a>
+        </form>
+    </body>
+</html>

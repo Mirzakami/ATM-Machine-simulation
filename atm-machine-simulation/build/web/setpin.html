@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>  
+    <head>
+        <title>SET PIN</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+                margin-left: 500px; 
+                margin-top: 200px;
+                margin-right: 550px;
+                padding: 30px;
+                border: solid black 2px;
+                border-radius: 20px;
+                background-color: lightblue;
+            }
+        </style>
+    </head>
+    <body>
+        <form method="post" action="setpinurl" >
+            <input type="hidden" name="action" value="setpin" >
+
+            Enter Name: <input type="text" name="name" placeholder="Name" required ><br><br>
+            Enter PIN:  <input type="password" name="pwd" maxlength="6" oninput="this.value=this.value.replace(/[^0-9]/g,'')" placeholder="PIN" required><br><br>    
+            Confirm PIN:  <input type="password" name="pwd2" maxlength="6" oninput="this.value= this.value.replace(/[^0-9]/g,'')"  placeholder="Confirm PIN" required><br><br>
+            
+            <input  type="submit"  value="setpin"><br><br>
+            <a href="index.html"> Back</a>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Balance</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+            margin-left: 500px;
+            margin-top: 250px;
+            margin-right: 500px;
+            padding: 40px;
+            border-color: white;
+            border: solid black 2px; 
+            border-radius: 10px;
+            background-color:lightblue;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="setpinurl" method="get">
+            <input type="hidden" name="action" value="balance">
+            
+            Check Balance:<input type="submit" value="Balance"><br><br>
+             <a href="atmoperation.html">Cancel</a>
+        </form>
+    </body>
+</html>

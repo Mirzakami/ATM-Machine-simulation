@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>ATM</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+                margin-left:500px; 
+                margin-top:200px;
+                margin-right: 500px;
+                padding: 30px;
+                border: solid black 2px;
+                border-radius: 20px;
+                background-color: lightblue;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <form action="setpinurl" method="post" >
+            <input type="hidden" name="action" value="atm">
+            
+            Enter Your Name:<input type="name" name="Nname" placeholder="Name" required><br><br>
+            Enter Your PIN:<input type="password" name="Npin" placeholder="PIN" maxlength="6" oninput="this.value=this.value.replace(/[^0-9]/g,'')"  required><br><br>
+            <input type="submit" value="continue"  />  <br><br>         
+            
+            <a href="index.html">Go Back </a>
+        </form>
+    </body>
+</html>
