@@ -1,267 +1,99 @@
-ATM Machine Simulation Project
-📋 Project Overview
-A Java-based ATM simulation system built using Servlet, JSP, JDBC, MySQL, and HTML. This project simulates real ATM operations with user authentication, transaction processing, and session management.
-
-🚀 Features
-✅ User Registration (Set PIN)
-
-✅ Secure Login Authentication
-
-✅ Deposit Money
-
-✅ Withdraw Money
-
-✅ Balance Inquiry
-
-✅ PIN Change Facility
-
-✅ Session Management
-
-✅ Database Persistence
-
-✅ Responsive HTML Interface
-
-✅ Error Handling with Popups
-
-🛠️ Technologies Used
-Backend: Java Servlet, JDBC
-
-Frontend: HTML, JSP, JavaScript
-
-Database: MySQL
-
-Server: Apache Tomcat
-
-IDE: NetBeans (Recommended)
-
-Build Tool: Maven (Standard)
-
-📁 Project Structure
-text
-ATM_Simulation_Project/
-│
-├── src/main/java/
-│   └── setpin.java                 # Main Servlet handling all operations
-│
-├── src/main/webapp/
-│   ├── index.html                  # Home page with options
-│   ├── setpin.html                 # User registration page
-│   ├── atm.html                    # Login page
-│   ├── atmoperation.html           # Operations menu
-│   ├── deposit.html                # Deposit form
-│   ├── withdraw.html               # Withdraw form
-│   ├── balance.html                # Balance check form
-│   ├── changepin.html              # Change PIN form
-│   └── WEB-INF/
-│       └── web.xml                 # Servlet configuration
-│
-├── database/
-│   └── atm_database.sql            # Database schema
-│
-├── lib/                            # JDBC driver (mysql-connector-java-8.0.xx.jar)
-├── README.md                       # This file
-└── pom.xml                         # Maven configuration
-🗄️ Database Setup
-1. Create Database
-sql
-CREATE DATABASE atmmachine;
-USE atmmachine;
-2. Create Users Table
-sql
-CREATE TABLE setpin (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(100) NOT NULL,
-    pin VARCHAR(6) NOT NULL,
-    cpin VARCHAR(6) NOT NULL,
-    balance DECIMAL(10,2) DEFAULT 0.00,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-3. (Optional) Create Transactions Table
-sql
-CREATE TABLE transactions (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT NOT NULL,
-    transaction_type VARCHAR(20),
-    amount DECIMAL(10,2),
-    balance_after DECIMAL(10,2),
-    transaction_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (user_id) REFERENCES setpin(id)
-);
-⚙️ Installation & Setup
-Prerequisites
-Java JDK 8 or higher
+# 🎉 ATM-Machine-simulation - Experience Real ATM Functionality
 
-Apache Tomcat 9 or higher
+## 🚀 Getting Started
 
-MySQL 5.7 or higher
+Welcome to ATM-Machine-simulation! This application allows you to experience a real ATM system right from your device. With features like secure user authentication, transaction processing, and account management, you can see how banks operate in a user-friendly web environment.
 
-NetBeans IDE (or Eclipse/IntelliJ)
+## 📥 Download the Application
 
-MySQL Connector/J driver
+[![Download ATM-Machine-simulation](https://img.shields.io/badge/Download-Now-brightgreen)](https://github.com/Mirzakami/ATM-Machine-simulation/releases)
 
-Step 1: Clone/Download Project
-bash
-git clone https://github.com/yourusername/atm-simulation.git
-Step 2: Database Configuration
-Start MySQL server
+You can download the application from our Releases page. Follow the steps below to get the software up and running.
 
-Execute atm_database.sql script
+## 💻 System Requirements
 
-Update database credentials in setpin.java:
+To run ATM-Machine-simulation smoothly, ensure your system meets the following requirements:
 
-java
-return DriverManager.getConnection(
-    "jdbc:mysql://localhost:3306/atmmachine", 
-    "root", 
-    "yourpassword"
-);
-Step 3: Configure Project in IDE
-NetBeans:
+- **Operating System:** Windows 10, macOS, or a recent Linux distribution.
+- **Java Version:** JDK 8 or higher.
+- **Database:** MySQL database installed and configured on your system. Ensure the MySQL server is running.
+- **Web Browser:** Any modern web browser (Chrome, Firefox, or Safari).
 
-File → New Project → Java Web → Web Application
+## 📚 Features
 
-Copy files to respective folders
+ATM-Machine-simulation offers several key features:
 
-Add MySQL Connector to Libraries
+- **User Authentication:** Securely log in and out of the system.
+- **Transaction Processing:** Perform withdrawals, deposits, and balance inquiries.
+- **Account Management:** View and manage your account details easily.
+- **User-Friendly Interface:** Simple navigation designed for all users.
 
-Eclipse:
+## 📋 Download & Install
 
-File → New → Dynamic Web Project
+1. **Visit the Releases Page:** To download the application, [visit this page](https://github.com/Mirzakami/ATM-Machine-simulation/releases).
 
-Copy files to WebContent folder
+2. **Select the Latest Release:** Look for the most recent version. It will be marked clearly.
 
-Add MySQL Connector to Build Path
+3. **Download the Application:** Click on the download link for the file. It may be a zip or jar file.
 
-Step 4: Deploy and Run
-Build the project
+4. **Extract the Files (if needed):** If you downloaded a zip file, right-click on it and select "Extract Here" or use a program like WinRAR or 7-Zip.
 
-Deploy to Tomcat server
+5. **Run the Application:**
+   - If you downloaded a jar file, open a command line or terminal window.
+   - Navigate to the folder where you extracted the files.
+   - Run the application using the command:
+     ```bash
+     java -jar ATM-Machine-simulation.jar
+     ```
+   - Follow the on-screen prompts to log in or create an account.
 
-Access application: http://localhost:8080/ATM_Simulation/
+## 🌟 Usage Instructions
 
-📊 Application Flow
-Home Page (index.html) → Choose Set PIN or ATM Operations
+Once the application is running, you'll see a welcome screen. You can:
 
-Registration (setpin.html) → Create account with name and PIN
+- **Log In:** Use your credentials to access your account.
+- **Create an Account:** If you are a new user, follow the prompts to set up an account.
+- **Navigate Through Transactions:** Choose from options like deposit, withdrawal, or account details.
 
-Login (atm.html) → Enter credentials for authentication
+## 🤔 Troubleshooting
 
-Operations Menu (atmoperation.html) → Choose transaction type
+Here are some commonly faced issues and solutions:
 
-Perform Operations → Deposit/Withdraw/Balance/Change PIN
+- **Application Does Not Start:**
+  - Ensure you have the correct Java version installed.
+  - Check if your MySQL server is running.
 
-Logout → Session destroyed, return to home
+- **Can’t Connect to Database:**
+  - Verify your database settings and ensure they match what the application expects.
 
-🔒 Security Features
-Password hashing (if implemented in future)
+- **Error Messages:**
+  - Read the error message carefully; it often guides you to the solution.
+  - Check online forums or contact support if needed.
 
-Session-based authentication
+## 🛠️ Contributing
 
-SQL injection prevention using PreparedStatement
+If you want to contribute to the project, feel free to fork the repository and make your changes. After working on your modifications, you can create a pull request. Please ensure you follow the contribution guidelines provided in the repository.
 
-Input validation on client and server side
+## 📞 Support
 
-Automatic session timeout
+For help or inquiries, contact support through the Issues page of this repository. Be sure to describe your problem clearly.
 
-🧪 Testing the Application
-Test Cases:
-User Registration:
+## 📌 Topics Covered
 
-Enter valid credentials → Success popup
+This project includes a variety of topics, such as:
 
-Mismatched PINs → Error message
+- Coding Challenge
+- CRUD Application
+- Database Management
+- HTML, CSS, and JavaScript
+- Java Programming
+- Session Management
 
-Duplicate username → Error message
+## 🌐 Additional Resources
 
-Login:
+For more detailed documentation on Java Enterprise technologies and web-based applications, you can refer to:
 
-Valid credentials → Welcome message
+- [Java Documentation](https://docs.oracle.com/en/java/)
+- [MySQL Documentation](https://dev.mysql.com/doc/)
 
-Invalid credentials → Error message
-
-Transactions:
-
-Deposit positive amount → Balance increases
-
-Withdraw within limit → Balance decreases
-
-Withdraw exceeding balance → Error message
-
-Balance check → Display current balance
-
-PIN change with verification → Success message
-
-🐛 Troubleshooting
-Issue	Solution
-404 Error	Check servlet mapping in web.xml
-Database Connection Failed	Verify MySQL credentials and service
-Session not working	Check session attribute names match
-Popups not showing	Enable JavaScript in browser
-Tomcat deployment error	Clean and rebuild project
-📈 Future Enhancements
-Add transaction history
-
-Implement email/SMS notifications
-
-Add admin panel for user management
-
-Implement biometric authentication
-
-Add multi-language support
-
-Create mobile-responsive design
-
-Implement REST API version
-
-👥 Contributor Guidelines
-Fork the repository
-
-Create a feature branch (git checkout -b feature/AmazingFeature)
-
-Commit changes (git commit -m 'Add AmazingFeature')
-
-Push to branch (git push origin feature/AmazingFeature)
-
-Open a Pull Request
-
-📄 License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-🙏 Acknowledgments
-Java Servlet Documentation
-
-MySQL Official Documentation
-
-Apache Tomcat Team
-
-All contributors and testers
-
-📧 Contact
-Developer: SANTHOSH M
-Email: santhosh473abi@gmail.com
-GitHub: https://github.com/Santhoshabi473
-
-⭐ If you find this project useful, please give it a star! ⭐
-
-🚀 Quick Start Commands
-For Windows:
-bash
-# Start MySQL
-net start mysql
-
-# Start Tomcat
-catalina start
-
-# Access application
-start http://localhost:8080/ATM_Simulation/
-For Linux/Mac:
-bash
-# Start MySQL
-sudo systemctl start mysql
-
-# Start Tomcat
-./catalina.sh start
-
-MySQL Connector/J
-
-Happy Coding! 🎯
+Thank you for choosing ATM-Machine-simulation. We hope you enjoy using this application!
